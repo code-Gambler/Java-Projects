@@ -1,0 +1,22 @@
+/**********************************************
+Workshop 4&5
+Course:APD545 - Winter 2024
+Last Name: Pillay
+First Name:Steven David
+ID:162218218
+Section:ZAA
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date:30-03-2024
+**********************************************/
+In JavaFX applications, there are various advantages to using Properties types rather than primitive data types, for instance as using SimpleStringProperty instead of String.
+
+Properties facilitate both binding and observability, which enables the automatic updating of various UI elements in response to changes in the underlying data. As a result, there may be less need for manual synchronization, which helps simplify the code.
+
+Encapsulation and Safety: By restricting access to the underlying data, properties offer a certain degree of encapsulation. This can enhance code safety and assist avoid inadvertent changes to the data.
+
+Integration with JavaFX Controls: Properties easily interact with JavaFX controls, which facilitates the use of UI elements such as TextField and TableView. For instance, you can link a Property directly to the value property of a UI component, doing away with the requirement for manual synchronization.
+
+Support for Change Listeners: Change listeners are integrated into properties, enabling you to set up callbacks to get alerts when the property's value fluctuates. When taking action in reaction to user interactions or data updates, this can be helpful.
+
+All things considered, JavaFX applications that use Properties rather than primitive data types tend to be more resilient, manageable, and responsive—especially when handling dynamic UI elements and data bindings.
