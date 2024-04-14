@@ -202,9 +202,9 @@ public class HomeController implements Initializable {
     	for(Part part: loadPart()) {
     		Inventory.addPart(part);
     	}
-//    	for(Product product: loadProduct()) {
-//    		Inventory.addProduct(product);
-//    	}
+    	for(Product product: loadProduct()) {
+    		Inventory.addProduct(product);
+    	}
     	System.out.println("All loaded successfully");
     }
 

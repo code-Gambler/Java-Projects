@@ -5,18 +5,28 @@ import java.util.ArrayList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.*;
-import data.MyObjectOutputStream;
 
 public class WriteObject {
 
     // Save objects to file
     public static void saveObjects(String filePath, Object object) {
+    	File f = new File(filePath);
+    	if (f.length() == 0) {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(filePath, true))) {
             outputStream.writeObject(object);
             System.out.println("Objects saved successfully to " + filePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    	}
+    	else {
+    		try (MyObjectOutputStream outputStream = new MyObjectOutputStream(new FileOutputStream(filePath, true))) {
+                outputStream.writeObject(object);
+                System.out.println("Objects saved successfully to " + filePath);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+    	}
     }
 
     // Load objects from file
