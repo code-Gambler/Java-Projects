@@ -1,5 +1,5 @@
 /**********************************************
-Workshop 4&5
+Workshop 5&6
 Course:APD545 - Winter 2024
 Last Name: Pillay
 First Name:Steven David
@@ -7,7 +7,7 @@ ID:162218218
 Section:ZAA
 This assignment represents my own work in accordance with Seneca Academic Policy.
 Signature
-Date:30-03-2024
+Date:14-04-2024
 **********************************************/
 package model;
 
@@ -20,13 +20,13 @@ public class Inventory implements Serializable{
 	 * 
 	 */ 
 	private static final long serialVersionUID = 1L;
-	private static final ObservableList<Part> associatedParts = FXCollections.observableArrayList();
+	private static final ObservableList<Part> allParts = FXCollections.observableArrayList();
     public static ObservableList<Product> allProducts = FXCollections.observableArrayList();
     private static int partID = 0;
     private static int prodID = 0;
 
     public static void addPart(Part part) {
-        associatedParts.add(part);
+        allParts.add(part);
     }
 
     public static void addProduct(Product product) {
@@ -35,7 +35,7 @@ public class Inventory implements Serializable{
 
     public static Part findPartByID(int partID) {
         Part foundPart = null;
-        for (Part part : associatedParts) {
+        for (Part part : allParts) {
             if (partID == part.getId()) {
                 foundPart = part;
             }
@@ -45,7 +45,7 @@ public class Inventory implements Serializable{
 
     public static ObservableList<Part> findPartByName(String partName) {
         ObservableList<Part> parts = FXCollections.observableArrayList();
-        for (Part part : associatedParts) {
+        for (Part part : allParts) {
             if (part.getName().toLowerCase().contains(partName.toLowerCase()) ||
                     (String.valueOf(part.getId()).contains(partName))) {
                 parts.add(part);
@@ -55,11 +55,11 @@ public class Inventory implements Serializable{
     }
 
     public static void modifyPart(int index, Part selectedPart) {
-        associatedParts.set(index, selectedPart);
+        allParts.set(index, selectedPart);
     }
 
     public static boolean deletePart(Part selectedPart) {
-        return associatedParts.remove(selectedPart);
+        return allParts.remove(selectedPart);
     }
 
     public static Product findProductByID(int productID) {
@@ -101,15 +101,20 @@ public class Inventory implements Serializable{
     }
 
     public static void updatePart(int index, Part selectedPart){
-        associatedParts.set(index, selectedPart);
+        allParts.set(index, selectedPart);
     }
 
     public static ObservableList<Part> getPartList() {
-        return associatedParts;
+        return allParts;
     }
 
     public static ObservableList<Product> getProductList() {
         return allProducts;
     }
 
+	public static void clear() {
+		
+		allParts.clear();
+		allProducts.clear();
+	}
 }

@@ -1,3 +1,14 @@
+/**********************************************
+Workshop 5&6
+Course:APD545 - Winter 2024
+Last Name: Pillay
+First Name:Steven David
+ID:162218218
+Section:ZAA
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date:14-04-2024
+**********************************************/
 package data;
 import java.io.*;
 import java.util.ArrayList;
@@ -6,11 +17,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.*;
 
-public class WriteObject {
+public class FileHandler {
 
     // Save objects to file
     public static void saveObjects(String filePath, Object object) {
     	File f = new File(filePath);
+    	
+    	//If the file is empty write the file header using class ObjectOutputStream 
     	if (f.length() == 0) {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(filePath, true))) {
             outputStream.writeObject(object);
@@ -19,6 +32,7 @@ public class WriteObject {
             e.printStackTrace();
         }
     	}
+    	//If the file is not empty write the file header using custom class MyObjectOutputStream
     	else {
     		try (MyObjectOutputStream outputStream = new MyObjectOutputStream(new FileOutputStream(filePath, true))) {
                 outputStream.writeObject(object);
@@ -29,20 +43,7 @@ public class WriteObject {
     	}
     }
 
-    // Load objects from file
-    public static Object loadObjects(String filePath) {
-        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(filePath))) {
-            Object object = inputStream.readObject();
-            System.out.println("Objects loaded successfully from " + filePath);
-            return object;
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
     public static void writePart(ObservableList<Part> partList) {
-        // Example usage
         String filePath = "part.dat";
  
         // Save objects
@@ -52,7 +53,6 @@ public class WriteObject {
     }
     
     public static void writeProduct(ObservableList<Product> productList) {
-        // Example usage
         String filePath = "product.dat";
         
         for (Product product : productList) {
@@ -62,7 +62,6 @@ public class WriteObject {
         	}
         }
         
-        // Save objects
         for (Product product : productList) {
         	saveObjects(filePath, product);
         }
@@ -86,7 +85,6 @@ public class WriteObject {
         } catch (FileNotFoundException e) {
         	System.out.println("FileNotFoundException: The File was not Found:" + filePath);
         } catch (IOException e) {
-            // Handle other IO exceptions
             throw e;
         }
 
@@ -116,29 +114,9 @@ public class WriteObject {
         } catch (FileNotFoundException e) {
         	System.out.println("FileNotFoundException: The File was not Found:" + filePath);
         } catch (IOException e) {
-            // Handle other IO exceptions
             throw e;
         }
 
         return productList;
     }
-
-//    Part loadedPart = (Part)loadObjects(filePath);
-    
-//    public static void writeProduct(ObservableList<Product> productList) {
-//        // Example usage
-//        String filePath = "product.dat";
-//        
-//        for (Product product : productList) {
-//        	product.PartList = new ArrayList<Part>();
-//        	for (Part IndPart: product.getProductParts()) {
-//        		product.PartList.add(IndPart);
-//        	}
-//        }
-//        
-//        // Save objects
-//        for (Product product : productList) {
-//        	saveObjects(filePath, product);
-//        }
-//    }
 }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b9f57d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BillingController">
+   <children>
+      <GridPane gridLinesVisible="true" layoutX="332.0" layoutY="131.0" prefHeight="176.0" prefWidth="253.0" style="-fx-background-color: #fca656;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.66668701171875" minWidth="10.0" prefWidth="159.33333333333334" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.33333333333334" minWidth="43.33331298828125" prefWidth="89.33333333333334" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fx:id="guestName" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="62.66668701171875" GridPane.columnIndex="1" />
+            <Text fx:id="numOfRoomsBooked" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text fx:id="typeOfRooms" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text fx:id="ratePerNight" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text fx:id="numOfDaysBooked" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Guest Email : " textAlignment="CENTER" />
+            <Label prefHeight="17.0" prefWidth="163.0" text="Number of Rooms Booked : " GridPane.rowIndex="1" />
+            <Label text="Rate Per Night : " GridPane.rowIndex="2" />
+            <Label text="Type of Rooms Booked : " GridPane.rowIndex="3" />
+            <Label text="Number of Days Booked For :" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <HBox layoutX="51.0" layoutY="324.0" />
+      <Text fx:id="finalAmount" layoutX="348.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final Amount : " wrappingWidth="220.1640625">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="135.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleCalculateButton" text="Calculate" />
+      <Label layoutX="17.0" layoutY="14.0" text="Steven's Resort" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="52.0" text="Calculate Your Bill" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bookingIDField" layoutX="96.0" layoutY="141.0" />
+      <Button layoutX="257.0" layoutY="141.0" mnemonicParsing="false" onAction="#handlePullDataButton" text="Pull Data" />
+      <Label layoutX="28.0" layoutY="145.0" text="Booking ID" />
+      <Label layoutX="28.0" layoutY="191.0" text="Discount (in %) : " />
+      <TextField fx:id="discountField" layoutX="138.0" layoutY="187.0" prefHeight="25.0" prefWidth="29.0" />
+      <Label layoutX="73.0" layoutY="115.0" text="Enter the Billing Details">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

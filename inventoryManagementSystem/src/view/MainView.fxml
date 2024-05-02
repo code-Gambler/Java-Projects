@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--/**********************************************
-Workshop 4&5
+Workshop 5&6
 Course:APD545 - Winter 2024
 Last Name: Pillay
 First Name:Steven David
@@ -9,7 +9,7 @@ ID:162218218
 Section:ZAA
 This assignment represents my own work in accordance with Seneca Academic Policy.
 Signature
-Date:30-03-2024
+Date:14-04-2024
 **********************************************/
 -->
 
@@ -73,5 +73,7 @@ Date:30-03-2024
       <Button fx:id="ExitButton" layoutX="876.0" layoutY="368.0" mnemonicParsing="false" onAction="#handleExitButton" text="Exit" />
       <Button layoutX="31.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSaveButton" text="Save" />
       <Button layoutX="103.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleLoadButton" text="Load" />
+      <Button layoutX="171.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveToDB" text="Save To DB" />
+      <Button layoutX="267.0" layoutY="14.0" mnemonicParsing="false" onAction="#loadFromDB" text="Load From DB" />
    </children>
 </AnchorPane>

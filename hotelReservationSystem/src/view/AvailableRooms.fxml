@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b9f57d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AvailableRoomsController">
+   <children>
+      <TableView fx:id="roomTable" layoutX="59.0" layoutY="139.0" prefHeight="200.0" prefWidth="464.0" style="-fx-background-color: #fca656;">
+      </TableView>
+      <HBox layoutX="75.0" layoutY="45.0">
+         <children>
+            <Text fx:id="numOfRooms" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <Label layoutX="198.0" layoutY="88.0" text="Rooms Available" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="14.0" text="Steven's Resort" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="352.0" text="Hurry Book your Rooms!" textAlignment="CENTER">
+         <font>
+            <Font name="Verdana" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
