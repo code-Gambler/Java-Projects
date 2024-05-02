@@ -1,31 +1,31 @@
+/**********************************************
+Workshop 5&6
+Course:APD545 - Winter 2024
+Last Name: Pillay
+First Name:Steven David
+ID:162218218
+Section:ZAA
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date:14-04-2024
+**********************************************/
 package data;
-
+//This a custom output Stream that doesn't write the file header in the binary
 //Importing input output classes
 import java.io.*;
 
-//Class 1
-//helper class
+
 class MyObjectOutputStream extends ObjectOutputStream {
 
- // Constructor of this class
- // 1. Default
- MyObjectOutputStream() throws IOException
- {
-
-     // Super keyword refers to parent class instance
+ MyObjectOutputStream() throws IOException {
      super();
  }
 
- // Constructor of this class
- // 1. Parameterized constructor
- MyObjectOutputStream(OutputStream o) throws IOException
- {
+ MyObjectOutputStream(OutputStream o) throws IOException {
      super(o);
  }
 
- // Method of this class
- public void writeStreamHeader() throws IOException
- {
+ public void writeStreamHeader() throws IOException {
      return;
  }
 }

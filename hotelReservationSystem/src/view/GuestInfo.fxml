@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b9f57d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GuestInfoController">
+   <children>
+      <Button layoutX="278.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleBookButton" text="Book" />
+      <Text fx:id="bookingIdDisplay" layoutX="514.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label layoutX="421.0" layoutY="34.0" text="Booking ID : ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="24.0" text="Steven's Resort" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="206.0" layoutY="55.0" text="Guest Information" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailBox" layoutX="391.0" layoutY="111.0" />
+      <Label layoutX="326.0" layoutY="115.0" text="Email : " />
+      <Label layoutX="39.0" layoutY="115.0" text="Title : " />
+      <TextField fx:id="titleBox" layoutX="104.0" layoutY="111.0" />
+      <Label layoutX="38.0" layoutY="163.0" text="First Name : " />
+      <TextField fx:id="firstNameBox" layoutX="104.0" layoutY="159.0" />
+      <Label layoutX="323.0" layoutY="163.0" text="Last Name : " />
+      <TextField fx:id="lastNameBox" layoutX="391.0" layoutY="159.0" />
+      <Label layoutX="38.0" layoutY="209.0" text="Address : " />
+      <TextField fx:id="addressBox" layoutX="104.0" layoutY="205.0" />
+      <Label layoutX="323.0" layoutY="209.0" text="Phone : " />
+      <TextField fx:id="phoneBox" layoutX="391.0" layoutY="205.0" />
+   </children>
+</AnchorPane>
